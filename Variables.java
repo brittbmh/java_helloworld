@@ -12,6 +12,10 @@ public class Variables {
         // Non-primitive variables
         // Strings are Objects (use double quotes)
         String name = "Britt";
-
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(javaIsNewToMe);
+        System.out.println(firstInitial);
+        System.out.println(name);
     }
 }
