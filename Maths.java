@@ -25,5 +25,7 @@ public class Maths {
         System.out.println(modNum < num4);
         boolean match = num2 == num3;
         boolean noMatch = num3 != num4;
+        System.out.println(match);
+        System.out.println(noMatch);
     }
 }

@@ -17,5 +17,6 @@ public class Variables {
         System.out.println(javaIsNewToMe);
         System.out.println(firstInitial);
         System.out.println(name);
+        System.out.println(name + "s first initial is " + firstInitial);
     }
 }
