@@ -15,3 +15,4 @@ public class Store {
         System.out.println(lemonadeStand.productType);
     }
 }
+
