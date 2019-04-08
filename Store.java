@@ -2,11 +2,13 @@ public class Store {
     // instance fields
     String productType;
     double price;
+    int quantity;
 
     // constructor method
-    public Store(String product, double initialPrice) {
+    public Store(String product, double initialPrice, int count) {
         productType = product;
         price = initialPrice;
+        quantity = count;
     }
 
     public void greetCustomer(String customer) {
@@ -24,6 +26,12 @@ public class Store {
         price = newPrice;
     }
 
+    public void itemSold(int soldCount){
+        int newQuantity = quantity - soldCount;
+        System.out.println("Items remaining equals " + newQuantity);
+        quantity = newQuantity; 
+    }
+
     public double getPriceWithTax() {
         double tax = 0.08;
         double totalPrice = price + price * tax;
@@ -32,9 +40,10 @@ public class Store {
 
     // main method
     public static void main(String[] args) {
-        Store lemonadeStand = new Store("Lemonade", 3.75);
-        Store cookieShop = new Store("Cookies", 5);
-
+        Store lemonadeStand = new Store("Lemonade", 3.75, 50);
+        Store cookieShop = new Store("Cookies", 5, 100);
+        Store bookSeller = new Store("books", 5, 20);
+        bookSeller.itemSold(3);
         lemonadeStand.greetCustomer("Jerome");
         double lemonadePrice = lemonadeStand.getPriceWithTax();
         System.out.println(lemonadePrice);
