@@ -28,7 +28,7 @@ public class Store {
 
     public void itemSold(int soldCount){
         int newQuantity = quantity - soldCount;
-        System.out.println("Items remaining equals " + newQuantity);
+        System.out.println(productType + " remaining equals " + newQuantity);
         quantity = newQuantity; 
     }
 
@@ -42,8 +42,9 @@ public class Store {
     public static void main(String[] args) {
         Store lemonadeStand = new Store("Lemonade", 3.75, 50);
         Store cookieShop = new Store("Cookies", 5, 100);
-        Store bookSeller = new Store("books", 5, 20);
+        Store bookSeller = new Store("Books", 5, 20);
         bookSeller.itemSold(3);
+        cookieShop.itemSold(10);
         lemonadeStand.greetCustomer("Jerome");
         double lemonadePrice = lemonadeStand.getPriceWithTax();
         System.out.println(lemonadePrice);
